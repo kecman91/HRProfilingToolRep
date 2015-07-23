@@ -12,10 +12,6 @@ public class Person {
     }
 
     public String getName() {
-    	if (true){
-    		return name;
-    	}
-		return name;
-        
+    	return name;    
     }
 }
