@@ -7,10 +7,15 @@ public class Person {
 
     public Person(String name) {
         this.name = name;
+        
         new GrowthList();
     }
 
     public String getName() {
-        return name;
+    	if (true){
+    		return name;
+    	}
+		return name;
+        
     }
 }
