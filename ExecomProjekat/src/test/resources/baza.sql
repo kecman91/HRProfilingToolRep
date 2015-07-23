@@ -1,0 +1,20 @@
+CREATE table Employee (
+	ID int not null AUTO_INCREMENT,
+	NAME varchar (20) not null,
+	SURNAME varchar (20) not null,
+	DATE_OF_BIRTH date not null,
+	ADDRESS varchar (50) not null,
+	PHONE_NUMBER varchar (20) not null,
+	EMAIL varchar (20) not null,
+	EM_PHONE_NUMBER varchar (20) not null,
+	WORK_START_DATE date not null,
+	WORK_END_DATE date not null,
+	START_DAY_FROM_EMPLOYMENT_BOOKLET date not null,
+	USERNAME varchar (25) not null,
+	PASSWORD varchar (100) not null,
+	POSITION varchar (25) not null,
+	ID_CARD_NUMBER int (10) not null,
+	PASSPORT_NUMBER int (10) not null,
+	PLACE_OF_BIRTH varchar (25) not null,
+	YEARS_OF_WORKING_EXPERIENCE int (3)
+)
