@@ -2,42 +2,108 @@ package model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Employee")
 public class Employee {
 	
+	@Id
+	@Column(name = "IDEMPLOYEE")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idEmployee;
+	
+	@Column(name = "NAME_EMPLOYEE")
 	private String nameEmployee;
+	@Column(name = "GENDER")
 	private String gender;
+	@Column(name = "DATE_OF_BIRTH")
 	private Date dateOfBirth;
+	@Column(name = "ADRESS")
 	private String address;
+	@Column(name = "PHONE_NUMBER")
 	private int phoneNumber;
+	@Column(name = "EMAIL")
 	private String email;
+	@Column(name = "EMERGENCY_PHONE_NUMBER")
 	private int emergencyPhoneNumber;
+	@Column(name = "START_DATE  ")
 	private Date startDate;
+	@Column(name = "END_DATE")
 	private Date endDate;
+	@Column(name = " START_DATE_FROM_BOOKLET")
 	private Date startDateFromBooklet;
+	@Column(name = "USERNAME")
 	private String username;
+	@Column(name = "ID_CARD_NUMBER")
 	private int idCardNumber;
+	@Column(name = " PASSPORT_NUMBER")
 	private int passportNumber;
+	@Column(name = "YEARS_OF_WORKING_EXP_IN_EXECOM")
 	private int yearsOfWorkingExpInExecom;
+	@Column(name = " YEARS_OF_WORKING_EXP")
 	private int yearsOfWorking;
+	
+	@Column(name = "PLACE_OF_BIRTH")
 	private String placeOfBirth;
+	
+	@Column(name = "TRAINING_LEARNING_PRIORITY")
 	private String trainingLearningPriority;
+	
+	@Column(name = "LICENCES_CERTIFICATES")
 	private String licencesCertificates;
+	
+	@Column(name = "AWARDS")
 	private String awards;
+	
+	@Column(name = "CONTRACT_TYPE")
 	private String contractType;
+	
+	@Column(name = "COMMUNICATION")
 	private int communication;
+	
+	@Column(name = "FAST_LEARNING")
 	private int fastLearning;
+	
+	@Column(name = "OPEN_TO_CHANGE ")
 	private int openToChange;
+	
+	@Column(name = "TEAM_PLAYER")
 	private int teamPlayer;
+	
+	@Column(name = "PROACTIVE_COMMUNICATION")
 	private int proactiveCommunication;
+	
+	@Column(name = "INTERPERSONAL_SKILLS")
 	private int interpersonalSkills;
+	
+	@Column(name = "KNOWLEDGE_SHARING ")
 	private int knowledgeSharing;
+	
+	@Column(name = "JUDGEMENT")
 	private int judgement;
+	
+	@Column(name = "DECISION_MAKING")
 	private int decisionMaking;
+	
+	@Column(name = "INFLUENCING")
 	private int influencing;
+	
+	@Column(name = "LEADERSHIP")
 	private int leadership;
+	
+	@Column(name = "COACHING")
 	private int coaching;
+	
+	@Column(name = "ORGANIZATIONAL_SKILLS")
 	private int organizationalSkills;
+	
+	
 	public int getIdEmployee() {
 		return idEmployee;
 	}
