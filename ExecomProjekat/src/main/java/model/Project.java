@@ -49,5 +49,17 @@ public class Project {
 	public void setDurationOfProject(int durationOfProject) {
 		this.durationOfProject = durationOfProject;
 	}
+	public List<ProjectInfo> getProjectInfo() {
+		return projectInfo;
+	}
+	public void setProjectInfo(List<ProjectInfo> projectInfo) {
+		this.projectInfo = projectInfo;
+	}
+	public List<TagClouds> getTagClouds() {
+		return tagClouds;
+	}
+	public void setTagClouds(List<TagClouds> tagClouds) {
+		this.tagClouds = tagClouds;
+	}
 	
 }
