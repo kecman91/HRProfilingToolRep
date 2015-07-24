@@ -1,12 +1,14 @@
 package model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -103,6 +105,11 @@ public class Employee {
 	@Column(name = "ORGANIZATIONAL_SKILLS")
 	private int organizationalSkills;
 	
+	@OneToMany(mappedBy="employee")
+	private List<TagCloudEmp> tagCloudEmps;
+	
+	@OneToMany(mappedBy="employee")
+	private List<ProjectInfo> projectInfos;	
 	
 	public int getIdEmployee() {
 		return idEmployee;
@@ -308,8 +315,16 @@ public class Employee {
 	public void setOrganizationalSkills(int organizationalSkills) {
 		this.organizationalSkills = organizationalSkills;
 	}
-	
-	
-	
-	
+	public List<TagCloudEmp> getTagCloudEmps() {
+		return tagCloudEmps;
+	}
+	public void setTagCloudEmps(List<TagCloudEmp> tagCloudEmps) {
+		this.tagCloudEmps = tagCloudEmps;
+	}
+	public List<ProjectInfo> getProjectInfos() {
+		return projectInfos;
+	}
+	public void setProjectInfos(List<ProjectInfo> projectInfos) {
+		this.projectInfos = projectInfos;
+	}	
 }
