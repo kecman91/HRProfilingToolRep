@@ -13,6 +13,7 @@ import org.gradle.execom.Execom;
 import org.gradle.execom.Keys;
 import org.gradle.execom.tables.records.TagcloudRecord;
 import org.jooq.Field;
+import org.jooq.Identity;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.UniqueKey;
@@ -32,7 +33,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Tagcloud extends TableImpl<TagcloudRecord> {
 
-	private static final long serialVersionUID = 1919913631;
+	private static final long serialVersionUID = -1717831264;
 
 	/**
 	 * The reference instance of <code>execom.tagcloud</code>
@@ -82,6 +83,14 @@ public class Tagcloud extends TableImpl<TagcloudRecord> {
 
 	private Tagcloud(String alias, Table<TagcloudRecord> aliased, Field<?>[] parameters) {
 		super(alias, Execom.EXECOM, aliased, parameters, "");
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Identity<TagcloudRecord, Integer> getIdentity() {
+		return Keys.IDENTITY_TAGCLOUD;
 	}
 
 	/**

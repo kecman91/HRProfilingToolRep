@@ -19,6 +19,7 @@ import org.gradle.execom.tables.records.TagcloudRecord;
 import org.gradle.execom.tables.records.TagcloudempRecord;
 import org.gradle.execom.tables.records.TagcloudsRecord;
 import org.jooq.ForeignKey;
+import org.jooq.Identity;
 import org.jooq.UniqueKey;
 import org.jooq.impl.AbstractKeys;
 
@@ -41,6 +42,9 @@ public class Keys {
 	// IDENTITY definitions
 	// -------------------------------------------------------------------------
 
+	public static final Identity<EmployeeRecord, Integer> IDENTITY_EMPLOYEE = Identities0.IDENTITY_EMPLOYEE;
+	public static final Identity<ProjectRecord, Integer> IDENTITY_PROJECT = Identities0.IDENTITY_PROJECT;
+	public static final Identity<TagcloudRecord, Integer> IDENTITY_TAGCLOUD = Identities0.IDENTITY_TAGCLOUD;
 
 	// -------------------------------------------------------------------------
 	// UNIQUE and PRIMARY KEY definitions
@@ -67,6 +71,12 @@ public class Keys {
 	// -------------------------------------------------------------------------
 	// [#1459] distribute members to avoid static initialisers > 64kb
 	// -------------------------------------------------------------------------
+
+	private static class Identities0 extends AbstractKeys {
+		public static Identity<EmployeeRecord, Integer> IDENTITY_EMPLOYEE = createIdentity(Employee.EMPLOYEE, Employee.EMPLOYEE.IDEMPLOYEE);
+		public static Identity<ProjectRecord, Integer> IDENTITY_PROJECT = createIdentity(Project.PROJECT, Project.PROJECT.IDPROJECT);
+		public static Identity<TagcloudRecord, Integer> IDENTITY_TAGCLOUD = createIdentity(Tagcloud.TAGCLOUD, Tagcloud.TAGCLOUD.IDTAGCLOUD);
+	}
 
 	private static class UniqueKeys0 extends AbstractKeys {
 		public static final UniqueKey<EmployeeRecord> KEY_EMPLOYEE_PRIMARY = createUniqueKey(Employee.EMPLOYEE, Employee.EMPLOYEE.IDEMPLOYEE);

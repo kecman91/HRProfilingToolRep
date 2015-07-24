@@ -13,6 +13,7 @@ import org.gradle.execom.Execom;
 import org.gradle.execom.Keys;
 import org.gradle.execom.tables.records.ProjectRecord;
 import org.jooq.Field;
+import org.jooq.Identity;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.UniqueKey;
@@ -32,7 +33,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Project extends TableImpl<ProjectRecord> {
 
-	private static final long serialVersionUID = -791690148;
+	private static final long serialVersionUID = -493269965;
 
 	/**
 	 * The reference instance of <code>execom.project</code>
@@ -82,6 +83,14 @@ public class Project extends TableImpl<ProjectRecord> {
 
 	private Project(String alias, Table<ProjectRecord> aliased, Field<?>[] parameters) {
 		super(alias, Execom.EXECOM, aliased, parameters, "");
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Identity<ProjectRecord, Integer> getIdentity() {
+		return Keys.IDENTITY_PROJECT;
 	}
 
 	/**

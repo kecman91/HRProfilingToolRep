@@ -15,6 +15,7 @@ import org.gradle.execom.Execom;
 import org.gradle.execom.Keys;
 import org.gradle.execom.tables.records.EmployeeRecord;
 import org.jooq.Field;
+import org.jooq.Identity;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.UniqueKey;
@@ -34,7 +35,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Employee extends TableImpl<EmployeeRecord> {
 
-	private static final long serialVersionUID = 1017363805;
+	private static final long serialVersionUID = -193326652;
 
 	/**
 	 * The reference instance of <code>execom.employee</code>
@@ -239,6 +240,14 @@ public class Employee extends TableImpl<EmployeeRecord> {
 
 	private Employee(String alias, Table<EmployeeRecord> aliased, Field<?>[] parameters) {
 		super(alias, Execom.EXECOM, aliased, parameters, "");
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Identity<EmployeeRecord, Integer> getIdentity() {
+		return Keys.IDENTITY_EMPLOYEE;
 	}
 
 	/**
