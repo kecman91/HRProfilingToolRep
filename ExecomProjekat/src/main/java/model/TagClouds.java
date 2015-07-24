@@ -1,20 +1,37 @@
 package model;
 
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TAGCLOUDS")
 public class TagClouds {
 
-	private int idTagCloud;
-	private int idProject;
+	@ManyToOne
+	@JoinColumn(name="IDTAGCLOUD")
+	private TagCloud tagCloud;
 	
-	public int getIdTagCloud() {
-		return idTagCloud;
+	@ManyToOne
+	@JoinColumn(name="IDPROJECT")
+	private Project project;
+
+	public TagCloud getTagCloud() {
+		return tagCloud;
 	}
-	public void setIdTagCloud(int idTagCloud) {
-		this.idTagCloud = idTagCloud;
+
+	public void setTagCloud(TagCloud tagCloud) {
+		this.tagCloud = tagCloud;
 	}
-	public int getIdProject() {
-		return idProject;
+
+	public Project getProject() {
+		return project;
 	}
-	public void setIdProject(int idProject) {
-		this.idProject = idProject;
+
+	public void setProject(Project project) {
+		this.project = project;
 	}
+	
+
 }
