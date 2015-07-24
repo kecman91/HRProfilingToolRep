@@ -1,23 +1,40 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="PROJECTINFO")
 public class ProjectInfo {
 	
-	private int idProject;
-	private int idEployee;
+	@ManyToOne
+	@JoinColumn(name="IDPROJECT")
+	private Project project;
+	
+	@ManyToOne
+	@JoinColumn(name="IDEMPLOYEE")
+	private Employee employee;
+	
+	@Column(name="JOB_RESPONSIBILITIES")
 	private String jobResponsibilities;
+	
+	@Column(name="PROJECT_EXP")
 	private String projectExp;
 	
-	public int getIdProject() {
-		return idProject;
+	public Project getProject() {
+		return project;
 	}
-	public void setIdProject(int idProject) {
-		this.idProject = idProject;
+	public void setProject(Project project) {
+		this.project = project;
 	}
-	public int getIdEployee() {
-		return idEployee;
+	public Employee getEmployee() {
+		return employee;
 	}
-	public void setIdEployee(int idEployee) {
-		this.idEployee = idEployee;
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
 	}
 	public String getJobResponsibilities() {
 		return jobResponsibilities;
