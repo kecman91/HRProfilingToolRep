@@ -58,9 +58,9 @@ task generate << {
     def xml = new groovy.xml.MarkupBuilder(writer)
             .configuration('xmlns': 'http://www.jooq.org/xsd/jooq-codegen-3.6.0.xsd') {
         jdbc() {
-            driver('mysql:mysql-connector-java:5.1.6')
-            url('jdbc:mysql:~/test-gradle')
-            user('')
+            driver('com.mysql.jdbc.Driver')
+            url('jdbc:mysql://localhost:3306/execom')
+            user('root')
             password('')
         }
         generator() {
@@ -69,8 +69,8 @@ task generate << {
             generate() {
             }
             target() {
-                packageName('org.jooq.example.gradle.db')
-                directory('src/main/java')
+                packageName('org.gradle')
+                directory('C:/Users/Smiley/Documents/GitHub/Execom/HRProfilingToolRep/ExecomProjekat')
             }
         }
     }
