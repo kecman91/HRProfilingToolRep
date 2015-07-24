@@ -34,7 +34,7 @@ public class Employee {
 	private String email;
 	@Column(name = "EMERGENCY_PHONE_NUMBER")
 	private int emergencyPhoneNumber;
-	@Column(name = "START_DATE  ")
+	@Column(name = "START_DATE")
 	private Date startDate;
 	@Column(name = "END_DATE")
 	private Date endDate;
@@ -72,7 +72,7 @@ public class Employee {
 	@Column(name = "FAST_LEARNING")
 	private int fastLearning;
 	
-	@Column(name = "OPEN_TO_CHANGE ")
+	@Column(name = "OPEN_TO_CHANGE")
 	private int openToChange;
 	
 	@Column(name = "TEAM_PLAYER")
@@ -84,7 +84,7 @@ public class Employee {
 	@Column(name = "INTERPERSONAL_SKILLS")
 	private int interpersonalSkills;
 	
-	@Column(name = "KNOWLEDGE_SHARING ")
+	@Column(name = "KNOWLEDGE_SHARING")
 	private int knowledgeSharing;
 	
 	@Column(name = "JUDGEMENT")
