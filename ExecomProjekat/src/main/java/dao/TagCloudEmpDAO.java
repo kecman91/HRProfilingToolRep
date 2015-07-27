@@ -18,13 +18,14 @@ public class TagCloudEmpDAO implements ITagCloudEmpDAO {
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	public TagCloudEmp createTagCloudEmp(TagCloudEmp tce) {
+	public boolean createTagCloudEmp(TagCloudEmp tce) {
 		if (tce != null) {
 			try {
-				return (TagCloudEmp) sessionFactory.getCurrentSession().save(tce);
+				 sessionFactory.getCurrentSession().save(tce);
+				 return true;
 			} catch (HibernateException e) {
 				e.printStackTrace();
-				return null;
+				return false;
 			}
 		} else {
 			throw new IllegalArgumentException("TagCloudEmp is null!");			

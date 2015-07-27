@@ -18,13 +18,14 @@ public class TagCloudsDAO implements ITagCloudsDAO{
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	public TagClouds createTagClouds(TagClouds tc) {
+	public boolean createTagClouds(TagClouds tc) {
 		if (tc != null) {
 			try {
-				return (TagClouds) sessionFactory.getCurrentSession().save(tc);
+				sessionFactory.getCurrentSession().save(tc);
+				return true;
 			} catch (HibernateException e) {
 				e.printStackTrace();
-				return null;
+				return false;
 			}
 		} else {
 			throw new IllegalArgumentException("TagClouds is null!");			

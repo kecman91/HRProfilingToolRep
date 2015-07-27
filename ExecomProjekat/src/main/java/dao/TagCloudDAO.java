@@ -18,8 +18,8 @@ public class TagCloudDAO implements ITagCloudDAO {
 	public int createTagCloud(TagCloud t) {
 		if (t != null) {
 			try {
-				TagCloud tg = (TagCloud) sessionFactory.getCurrentSession().save(t);
-				return tg.getIdTagCloud();
+				return (Integer) sessionFactory.getCurrentSession().save(t);
+				
 			} catch (HibernateException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
