@@ -2,6 +2,8 @@ package model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -10,10 +12,12 @@ import javax.persistence.Table;
 @Table(name="PROJECTINFO")
 public class ProjectInfo {
 	
+	@Id
 	@ManyToOne
 	@JoinColumn(name="IDPROJECT")
 	private Project project;
 	
+	@Id
 	@ManyToOne
 	@JoinColumn(name="IDEMPLOYEE")
 	private Employee employee;

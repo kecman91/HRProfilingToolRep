@@ -1,6 +1,7 @@
 package model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -9,10 +10,12 @@ import javax.persistence.Table;
 @Table(name="TAGCLOUDS")
 public class TagClouds {
 
+	@Id
 	@ManyToOne
 	@JoinColumn(name="IDTAGCLOUD")
 	private TagCloud tagCloud;
 	
+	@Id
 	@ManyToOne
 	@JoinColumn(name="IDPROJECT")
 	private Project project;

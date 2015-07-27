@@ -15,8 +15,7 @@ public class EmployeeDAO implements IEmployeeDAO{
 	public int createEmployee(Employee e) {
 		if (e != null) {
 			try {
-				Employee ee = (Employee) sessionFactory.getCurrentSession().save(e);
-				return ee.getIdEmployee();
+				return (Integer) sessionFactory.getCurrentSession().save(e);
 			} catch (HibernateException ex) {
 				// TODO Auto-generated catch block
 				ex.printStackTrace();
