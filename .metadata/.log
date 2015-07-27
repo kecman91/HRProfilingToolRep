@@ -435,3 +435,298 @@ build file 'C:\Users\Smiley\Documents\GitHub\Execom\HRProfilingToolRep\ExecomPro
 
 	at org.gradle.groovy.scripts.internal.DefaultScriptCompilationHandler.compileScript(DefaultScriptCompilationHandler.java:100)
 	... 63 more
+
+!ENTRY org.springsource.ide.eclipse.gradle.core 4 0 2015-07-24 15:38:47.642
+!MESSAGE startup failed:
+build file 'C:\Users\Smiley\Documents\GitHub\Execom\HRProfilingToolRep\ExecomProjekat\build.gradle': 15: Statement labels may not be used in build scripts.
+In case you tried to configure a property named 'compile', replace ':' with '=' or ' ', otherwise it will not have the desired effect.
+ @ line 15, column 13.
+       compile:'javax.persistence:persistence-api:1.0'
+               ^
+
+1 error
+
+!STACK 0
+org.gradle.tooling.BuildException: Could not execute build using Gradle distribution 'https://services.gradle.org/distributions/gradle-2.2.1-bin.zip'.
+	at org.gradle.tooling.internal.consumer.ResultHandlerAdapter.onFailure(ResultHandlerAdapter.java:57)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConsumerActionExecutor$1$1.run(DefaultAsyncConsumerActionExecutor.java:57)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+	at org.gradle.tooling.internal.consumer.BlockingResultHandler.getResult(BlockingResultHandler.java:46)
+	at org.gradle.tooling.internal.consumer.DefaultBuildLauncher.run(DefaultBuildLauncher.java:71)
+	at org.springsource.ide.eclipse.gradle.core.TaskUtil.execute(TaskUtil.java:117)
+	at org.springsource.ide.eclipse.gradle.core.launch.GradleProcess$1.doit(GradleProcess.java:92)
+	at org.springsource.ide.eclipse.gradle.core.util.GradleRunnable$1.run(GradleRunnable.java:53)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.gradle.internal.exceptions.LocationAwareException: Build file 'C:\Users\Smiley\Documents\GitHub\Execom\HRProfilingToolRep\ExecomProjekat\build.gradle' line: 15
+Could not compile build file 'C:\Users\Smiley\Documents\GitHub\Execom\HRProfilingToolRep\ExecomProjekat\build.gradle'.
+	at org.gradle.initialization.DefaultExceptionAnalyser.transform(DefaultExceptionAnalyser.java:77)
+	at org.gradle.initialization.MultipleBuildFailuresExceptionAnalyser.transform(MultipleBuildFailuresExceptionAnalyser.java:47)
+	at org.gradle.initialization.StackTraceSanitizingExceptionAnalyser.transform(StackTraceSanitizingExceptionAnalyser.java:30)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:108)
+	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:86)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:80)
+	at org.gradle.tooling.internal.provider.BuildModelAction.run(BuildModelAction.java:43)
+	at org.gradle.tooling.internal.provider.BuildModelAction.run(BuildModelAction.java:30)
+	at org.gradle.tooling.internal.provider.ConfiguringBuildAction.run(ConfiguringBuildAction.java:119)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:36)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:26)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:47)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:34)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecution.proceed(DaemonCommandExecution.java:119)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:35)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecution.proceed(DaemonCommandExecution.java:119)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:24)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecution.proceed(DaemonCommandExecution.java:119)
+	at org.gradle.launcher.daemon.server.exec.StartStopIfBuildAndStop.execute(StartStopIfBuildAndStop.java:33)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecution.proceed(DaemonCommandExecution.java:119)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.call(ForwardClientInput.java:71)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.call(ForwardClientInput.java:69)
+	at org.gradle.util.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:69)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecution.proceed(DaemonCommandExecution.java:119)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:60)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:34)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecution.proceed(DaemonCommandExecution.java:119)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:70)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:34)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecution.proceed(DaemonCommandExecution.java:119)
+	at org.gradle.launcher.daemon.server.exec.DaemonHygieneAction.execute(DaemonHygieneAction.java:39)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecution.proceed(DaemonCommandExecution.java:119)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:46)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:246)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+Caused by: org.gradle.groovy.scripts.ScriptCompilationException: Could not compile build file 'C:\Users\Smiley\Documents\GitHub\Execom\HRProfilingToolRep\ExecomProjekat\build.gradle'.
+	at org.gradle.groovy.scripts.internal.DefaultScriptCompilationHandler.wrapCompilationFailure(DefaultScriptCompilationHandler.java:136)
+	at org.gradle.groovy.scripts.internal.DefaultScriptCompilationHandler.compileScript(DefaultScriptCompilationHandler.java:102)
+	at org.gradle.groovy.scripts.internal.DefaultScriptCompilationHandler.compileToDir(DefaultScriptCompilationHandler.java:65)
+	at org.gradle.groovy.scripts.internal.FileCacheBackedScriptClassCompiler$CacheInitializer.execute(FileCacheBackedScriptClassCompiler.java:99)
+	at org.gradle.groovy.scripts.internal.FileCacheBackedScriptClassCompiler$CacheInitializer.execute(FileCacheBackedScriptClassCompiler.java:82)
+	at org.gradle.groovy.scripts.internal.FileCacheBackedScriptClassCompiler$ProgressReportingInitializer.execute(FileCacheBackedScriptClassCompiler.java:116)
+	at org.gradle.groovy.scripts.internal.FileCacheBackedScriptClassCompiler$ProgressReportingInitializer.execute(FileCacheBackedScriptClassCompiler.java:103)
+	at org.gradle.cache.internal.DefaultPersistentDirectoryCache$Initializer.initialize(DefaultPersistentDirectoryCache.java:94)
+	at org.gradle.cache.internal.DefaultCacheAccess$2.run(DefaultCacheAccess.java:104)
+	at org.gradle.cache.internal.DefaultFileLockManager$DefaultFileLock.doWriteAction(DefaultFileLockManager.java:173)
+	at org.gradle.cache.internal.DefaultFileLockManager$DefaultFileLock.writeFile(DefaultFileLockManager.java:163)
+	at org.gradle.cache.internal.DefaultCacheAccess.open(DefaultCacheAccess.java:102)
+	at org.gradle.cache.internal.DefaultPersistentDirectoryStore.open(DefaultPersistentDirectoryStore.java:46)
+	at org.gradle.cache.internal.DefaultPersistentDirectoryStore.open(DefaultPersistentDirectoryStore.java:28)
+	at org.gradle.cache.internal.DefaultCacheFactory.doOpen(DefaultCacheFactory.java:80)
+	at org.gradle.cache.internal.DefaultCacheFactory.open(DefaultCacheFactory.java:50)
+	at org.gradle.cache.internal.DefaultCacheRepository$PersistentCacheBuilder.doOpen(DefaultCacheRepository.java:138)
+	at org.gradle.cache.internal.DefaultCacheRepository$AbstractCacheBuilder.open(DefaultCacheRepository.java:121)
+	at org.gradle.groovy.scripts.internal.FileCacheBackedScriptClassCompiler.compile(FileCacheBackedScriptClassCompiler.java:59)
+	at org.gradle.groovy.scripts.internal.ShortCircuitEmptyScriptCompiler.compile(ShortCircuitEmptyScriptCompiler.java:36)
+	at org.gradle.groovy.scripts.internal.CachingScriptClassCompiler.compile(CachingScriptClassCompiler.java:37)
+	at org.gradle.groovy.scripts.DefaultScriptCompilerFactory$ScriptCompilerImpl.compile(DefaultScriptCompilerFactory.java:64)
+	at org.gradle.configuration.DefaultScriptPluginFactory$ScriptPluginImpl.apply(DefaultScriptPluginFactory.java:141)
+	at org.gradle.configuration.project.BuildScriptProcessor.execute(BuildScriptProcessor.java:39)
+	at org.gradle.configuration.project.BuildScriptProcessor.execute(BuildScriptProcessor.java:26)
+	at org.gradle.configuration.project.ConfigureActionsProjectEvaluator.evaluate(ConfigureActionsProjectEvaluator.java:34)
+	at org.gradle.configuration.project.LifecycleProjectEvaluator.evaluate(LifecycleProjectEvaluator.java:59)
+	at org.gradle.api.internal.project.AbstractProject.evaluate(AbstractProject.java:504)
+	at org.gradle.api.internal.project.AbstractProject.evaluate(AbstractProject.java:83)
+	at org.gradle.execution.TaskPathProjectEvaluator.configureHierarchy(TaskPathProjectEvaluator.java:42)
+	at org.gradle.configuration.DefaultBuildConfigurer.configure(DefaultBuildConfigurer.java:35)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:129)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:106)
+	... 32 more
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+build file 'C:\Users\Smiley\Documents\GitHub\Execom\HRProfilingToolRep\ExecomProjekat\build.gradle': 15: Statement labels may not be used in build scripts.
+In case you tried to configure a property named 'compile', replace ':' with '=' or ' ', otherwise it will not have the desired effect.
+ @ line 15, column 13.
+       compile:'javax.persistence:persistence-api:1.0'
+               ^
+
+1 error
+
+	at org.gradle.groovy.scripts.internal.DefaultScriptCompilationHandler.compileScript(DefaultScriptCompilationHandler.java:100)
+	... 63 more
+!SESSION 2015-07-27 09:11:45.137 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2015-07-27 09:12:35.144
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2015-07-27 09:12:35.144
+!MESSAGE Could not load repository template extension contributed by 'org.springsource.ide.eclipse.dashboard.ui' with connectorKind 'jira'
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2015-07-27 09:12:35.144
+!MESSAGE Could not load repository template extension contributed by 'org.springsource.ide.eclipse.dashboard.ui' with connectorKind 'jira'
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-27 09:13:29.213
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-27 09:13:29.229
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Smiley'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY tern.eclipse.ide.jsdt 4 0 2015-07-27 09:38:18.595
+!MESSAGE Error while JSDT ClassPath changed.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The resource tree is locked for modifications.
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:116)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2251)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1322)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1376)
+	at tern.eclipse.ide.core.TernNature.configure(TernNature.java:59)
+	at tern.eclipse.ide.internal.core.IDETernProject.ensureNatureIsConfigured(IDETernProject.java:817)
+	at tern.eclipse.ide.internal.core.IDETernProject.<init>(IDETernProject.java:111)
+	at tern.eclipse.ide.internal.core.IDETernProject.getTernProject(IDETernProject.java:134)
+	at tern.eclipse.ide.core.TernCorePlugin.getTernProject(TernCorePlugin.java:99)
+	at tern.eclipse.ide.jsdt.internal.JSDTClassPathManager.elementChanged(JSDTClassPathManager.java:67)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1591)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1581)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1416)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1392)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1945)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:389)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 380 2015-07-27 09:38:18.595
+!MESSAGE The resource tree is locked for modifications.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-07-27 09:38:19.751
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.jface 2 0 2015-07-27 09:42:10.799
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-07-27 09:42:10.799
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace,References in Workspace,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27646bb3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.jboss.tools.seam.ui.find.references,Find Seam References,
+		Find Seam References,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19574274,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.beans.ui.editor.commands.searchBeanReferences,Spring Beans References Search,
+		,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@68dae5c4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.eclipse.egit.ui 4 0 2015-07-27 10:50:27.142
+!MESSAGE Checkout conflict with files: 
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/cache.properties.lock
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileHashes.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
+!STACK 0
+org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/cache.properties.lock
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileHashes.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:406)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:313)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:128)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:139)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.runInWorkspace(PullOperationUI.java:114)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/cache.properties.lock
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileHashes.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:413)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:394)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:286)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2015-07-27 10:50:43.048
+!MESSAGE Checkout conflict with files: 
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/cache.properties.lock
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileHashes.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
+!STACK 0
+org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/cache.properties.lock
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileHashes.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:406)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:313)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:128)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:139)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.runInWorkspace(PullOperationUI.java:114)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/cache.properties.lock
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileHashes.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:413)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:394)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:286)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2015-07-27 10:51:14.252
+!MESSAGE Checkout conflict with files: 
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/cache.properties.lock
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileHashes.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
+!STACK 0
+org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/cache.properties.lock
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileHashes.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:406)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:313)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:128)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:139)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.runInWorkspace(PullOperationUI.java:114)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/cache.properties.lock
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileHashes.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin
+ExecomProjekat/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:413)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:394)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:286)
+	... 8 more
