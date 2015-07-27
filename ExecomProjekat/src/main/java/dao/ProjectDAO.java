@@ -16,8 +16,7 @@ public class ProjectDAO implements IProjectDAO {
 	public int createProject(Project p) {
 		if (p != null) {
 			try {
-				Project pr = (Project) sessionFactory.getCurrentSession().save(p);
-				return pr.getIdProject();
+				return (Integer) sessionFactory.getCurrentSession().save(p);
 			} catch (HibernateException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
