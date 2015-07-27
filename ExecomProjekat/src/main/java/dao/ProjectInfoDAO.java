@@ -13,18 +13,19 @@ public class ProjectInfoDAO implements IProjectInfoDAO{
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	public ProjectInfo createProjectInfo(ProjectInfo pi) {
+	public boolean createProjectInfo(ProjectInfo pi) {
 		if (pi != null) {
 			try {
-				ProjectInfo pnew = (ProjectInfo) sessionFactory.getCurrentSession().save(pi);
-				return pnew;
+						sessionFactory.getCurrentSession().save(pi);
+				return true;
 			} catch (HibernateException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-				return null;
+				return false;
 			}
 		} else {
-			throw new IllegalArgumentException("ProjectInfo is null!");			
+			throw new IllegalArgumentException("ProjectInfo is null!");
+			//return false;
 		}
 	}
 
@@ -66,6 +67,8 @@ public class ProjectInfoDAO implements IProjectInfoDAO{
 		query.setParameter("employeeID", idEmployee);
 		
 		ProjectInfo pi = (ProjectInfo) query.getSingleResult();
+		
+		//ProjectInfo pi2 = (ProjectInfo) sessionFactory.getCurrentSession().get(ProjectInfo.class, new int[2] {idProject , idEmployee} );
 		
 		if(pi!=null){
 			return pi;
