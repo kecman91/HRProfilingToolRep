@@ -29,11 +29,11 @@ public class Employee {
 	@Column(name = "ADRESS")
 	private String address;
 	@Column(name = "PHONE_NUMBER")
-	private int phoneNumber;
+	private String phoneNumber;
 	@Column(name = "EMAIL")
 	private String email;
 	@Column(name = "EMERGENCY_PHONE_NUMBER")
-	private int emergencyPhoneNumber;
+	private String emergencyPhoneNumber;
 	@Column(name = "START_DATE")
 	private Date startDate;
 	@Column(name = "END_DATE")
@@ -43,9 +43,9 @@ public class Employee {
 	@Column(name = "USERNAME")
 	private String username;
 	@Column(name = "ID_CARD_NUMBER")
-	private int idCardNumber;
+	private String idCardNumber;
 	@Column(name = " PASSPORT_NUMBER")
-	private int passportNumber;
+	private String passportNumber;
 	@Column(name = "YEARS_OF_WORKING_EXP_IN_EXECOM")
 	private int yearsOfWorkingExpInExecom;
 	@Column(name = " YEARS_OF_WORKING_EXP")
@@ -141,10 +141,10 @@ public class Employee {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	public String getEmail() {
@@ -153,10 +153,10 @@ public class Employee {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getEmergencyPhoneNumber() {
+	public String getEmergencyPhoneNumber() {
 		return emergencyPhoneNumber;
 	}
-	public void setEmergencyPhoneNumber(int emergencyPhoneNumber) {
+	public void setEmergencyPhoneNumber(String emergencyPhoneNumber) {
 		this.emergencyPhoneNumber = emergencyPhoneNumber;
 	}
 	public Date getStartDate() {
@@ -183,16 +183,16 @@ public class Employee {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public int getIdCardNumber() {
+	public String getIdCardNumber() {
 		return idCardNumber;
 	}
-	public void setIdCardNumber(int idCardNumber) {
+	public void setIdCardNumber(String idCardNumber) {
 		this.idCardNumber = idCardNumber;
 	}
-	public int getPassportNumber() {
+	public String getPassportNumber() {
 		return passportNumber;
 	}
-	public void setPassportNumber(int passportNumber) {
+	public void setPassportNumber(String passportNumber) {
 		this.passportNumber = passportNumber;
 	}
 	public int getYearsOfWorkingExpInExecom() {
