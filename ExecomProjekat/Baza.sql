@@ -74,6 +74,7 @@ create table PROJECT
 /*==============================================================*/
 create table PROJECTINFO
 (
+   IDPROJECTINFO		int not null,
    IDPROJECT            int not null,
    IDEMPLOYEE           int not null,
    JOB_RESPONSIBILITIES varchar(50),
