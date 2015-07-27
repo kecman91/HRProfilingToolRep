@@ -15,56 +15,6 @@ import javax.persistence.Table;
 @Table(name = "Employee")
 public class Employee {
 	
-	public Employee(int idEmployee, String nameEmployee, String gender,
-			Date dateOfBirth, String address, String phoneNumber, String email,
-			String emergencyPhoneNumber, Date startDate, Date endDate,
-			Date startDateFromBooklet, String username, String idCardNumber,
-			String passportNumber, int yearsOfWorkingExpInExecom,
-			int yearsOfWorking, String placeOfBirth,
-			String trainingLearningPriority, String licencesCertificates,
-			String awards, String contractType, int communication,
-			int fastLearning, int openToChange, int teamPlayer,
-			int proactiveCommunication, int interpersonalSkills,
-			int knowledgeSharing, int judgement, int decisionMaking,
-			int influencing, int leadership, int coaching,
-			int organizationalSkills) {
-		super();
-		this.idEmployee = idEmployee;
-		this.nameEmployee = nameEmployee;
-		this.gender = gender;
-		this.dateOfBirth = dateOfBirth;
-		this.address = address;
-		this.phoneNumber = phoneNumber;
-		this.email = email;
-		this.emergencyPhoneNumber = emergencyPhoneNumber;
-		this.startDate = startDate;
-		this.endDate = endDate;
-		this.startDateFromBooklet = startDateFromBooklet;
-		this.username = username;
-		this.idCardNumber = idCardNumber;
-		this.passportNumber = passportNumber;
-		this.yearsOfWorkingExpInExecom = yearsOfWorkingExpInExecom;
-		this.yearsOfWorking = yearsOfWorking;
-		this.placeOfBirth = placeOfBirth;
-		this.trainingLearningPriority = trainingLearningPriority;
-		this.licencesCertificates = licencesCertificates;
-		this.awards = awards;
-		this.contractType = contractType;
-		this.communication = communication;
-		this.fastLearning = fastLearning;
-		this.openToChange = openToChange;
-		this.teamPlayer = teamPlayer;
-		this.proactiveCommunication = proactiveCommunication;
-		this.interpersonalSkills = interpersonalSkills;
-		this.knowledgeSharing = knowledgeSharing;
-		this.judgement = judgement;
-		this.decisionMaking = decisionMaking;
-		this.influencing = influencing;
-		this.leadership = leadership;
-		this.coaching = coaching;
-		this.organizationalSkills = organizationalSkills;
-	}
-	
 	@Id
 	@Column(name = "IDEMPLOYEE")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -376,5 +326,215 @@ public class Employee {
 	}
 	public void setProjectInfos(List<ProjectInfo> projectInfos) {
 		this.projectInfos = projectInfos;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + ((awards == null) ? 0 : awards.hashCode());
+		result = prime * result + coaching;
+		result = prime * result + communication;
+		result = prime * result
+				+ ((contractType == null) ? 0 : contractType.hashCode());
+		result = prime * result
+				+ ((dateOfBirth == null) ? 0 : dateOfBirth.hashCode());
+		result = prime * result + decisionMaking;
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime
+				* result
+				+ ((emergencyPhoneNumber == null) ? 0 : emergencyPhoneNumber
+						.hashCode());
+		result = prime * result + ((endDate == null) ? 0 : endDate.hashCode());
+		result = prime * result + fastLearning;
+		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
+		result = prime * result
+				+ ((idCardNumber == null) ? 0 : idCardNumber.hashCode());
+		result = prime * result + idEmployee;
+		result = prime * result + influencing;
+		result = prime * result + interpersonalSkills;
+		result = prime * result + judgement;
+		result = prime * result + knowledgeSharing;
+		result = prime * result + leadership;
+		result = prime
+				* result
+				+ ((licencesCertificates == null) ? 0 : licencesCertificates
+						.hashCode());
+		result = prime * result
+				+ ((nameEmployee == null) ? 0 : nameEmployee.hashCode());
+		result = prime * result + openToChange;
+		result = prime * result + organizationalSkills;
+		result = prime * result
+				+ ((passportNumber == null) ? 0 : passportNumber.hashCode());
+		result = prime * result
+				+ ((phoneNumber == null) ? 0 : phoneNumber.hashCode());
+		result = prime * result
+				+ ((placeOfBirth == null) ? 0 : placeOfBirth.hashCode());
+		result = prime * result + proactiveCommunication;
+		result = prime * result
+				+ ((projectInfos == null) ? 0 : projectInfos.hashCode());
+		result = prime * result
+				+ ((startDate == null) ? 0 : startDate.hashCode());
+		result = prime
+				* result
+				+ ((startDateFromBooklet == null) ? 0 : startDateFromBooklet
+						.hashCode());
+		result = prime * result
+				+ ((tagCloudEmps == null) ? 0 : tagCloudEmps.hashCode());
+		result = prime * result + teamPlayer;
+		result = prime
+				* result
+				+ ((trainingLearningPriority == null) ? 0
+						: trainingLearningPriority.hashCode());
+		result = prime * result
+				+ ((username == null) ? 0 : username.hashCode());
+		result = prime * result + yearsOfWorking;
+		result = prime * result + yearsOfWorkingExpInExecom;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
+		if (awards == null) {
+			if (other.awards != null)
+				return false;
+		} else if (!awards.equals(other.awards))
+			return false;
+		if (coaching != other.coaching)
+			return false;
+		if (communication != other.communication)
+			return false;
+		if (contractType == null) {
+			if (other.contractType != null)
+				return false;
+		} else if (!contractType.equals(other.contractType))
+			return false;
+		if (dateOfBirth == null) {
+			if (other.dateOfBirth != null)
+				return false;
+		} else if (!dateOfBirth.equals(other.dateOfBirth))
+			return false;
+		if (decisionMaking != other.decisionMaking)
+			return false;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		if (emergencyPhoneNumber == null) {
+			if (other.emergencyPhoneNumber != null)
+				return false;
+		} else if (!emergencyPhoneNumber.equals(other.emergencyPhoneNumber))
+			return false;
+		if (endDate == null) {
+			if (other.endDate != null)
+				return false;
+		} else if (!endDate.equals(other.endDate))
+			return false;
+		if (fastLearning != other.fastLearning)
+			return false;
+		if (gender == null) {
+			if (other.gender != null)
+				return false;
+		} else if (!gender.equals(other.gender))
+			return false;
+		if (idCardNumber == null) {
+			if (other.idCardNumber != null)
+				return false;
+		} else if (!idCardNumber.equals(other.idCardNumber))
+			return false;
+		if (idEmployee != other.idEmployee)
+			return false;
+		if (influencing != other.influencing)
+			return false;
+		if (interpersonalSkills != other.interpersonalSkills)
+			return false;
+		if (judgement != other.judgement)
+			return false;
+		if (knowledgeSharing != other.knowledgeSharing)
+			return false;
+		if (leadership != other.leadership)
+			return false;
+		if (licencesCertificates == null) {
+			if (other.licencesCertificates != null)
+				return false;
+		} else if (!licencesCertificates.equals(other.licencesCertificates))
+			return false;
+		if (nameEmployee == null) {
+			if (other.nameEmployee != null)
+				return false;
+		} else if (!nameEmployee.equals(other.nameEmployee))
+			return false;
+		if (openToChange != other.openToChange)
+			return false;
+		if (organizationalSkills != other.organizationalSkills)
+			return false;
+		if (passportNumber == null) {
+			if (other.passportNumber != null)
+				return false;
+		} else if (!passportNumber.equals(other.passportNumber))
+			return false;
+		if (phoneNumber == null) {
+			if (other.phoneNumber != null)
+				return false;
+		} else if (!phoneNumber.equals(other.phoneNumber))
+			return false;
+		if (placeOfBirth == null) {
+			if (other.placeOfBirth != null)
+				return false;
+		} else if (!placeOfBirth.equals(other.placeOfBirth))
+			return false;
+		if (proactiveCommunication != other.proactiveCommunication)
+			return false;
+		if (projectInfos == null) {
+			if (other.projectInfos != null)
+				return false;
+		} else if (!projectInfos.equals(other.projectInfos))
+			return false;
+		if (startDate == null) {
+			if (other.startDate != null)
+				return false;
+		} else if (!startDate.equals(other.startDate))
+			return false;
+		if (startDateFromBooklet == null) {
+			if (other.startDateFromBooklet != null)
+				return false;
+		} else if (!startDateFromBooklet.equals(other.startDateFromBooklet))
+			return false;
+		if (tagCloudEmps == null) {
+			if (other.tagCloudEmps != null)
+				return false;
+		} else if (!tagCloudEmps.equals(other.tagCloudEmps))
+			return false;
+		if (teamPlayer != other.teamPlayer)
+			return false;
+		if (trainingLearningPriority == null) {
+			if (other.trainingLearningPriority != null)
+				return false;
+		} else if (!trainingLearningPriority
+				.equals(other.trainingLearningPriority))
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+		if (yearsOfWorking != other.yearsOfWorking)
+			return false;
+		if (yearsOfWorkingExpInExecom != other.yearsOfWorkingExpInExecom)
+			return false;
+		return true;
 	}	
+	
 }

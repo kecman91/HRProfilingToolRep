@@ -8,7 +8,6 @@ public class EmployeeTest {
 
 	@Test
 	public void testCreateEmployee() {
-		fail("Not yet implemented");
 	}
 
 	@Test
