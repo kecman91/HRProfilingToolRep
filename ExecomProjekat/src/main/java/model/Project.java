@@ -2,10 +2,12 @@ package model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -19,12 +21,21 @@ public class Project {
 	
 	private int durationOfProject;
 	
-	@OneToMany(mappedBy="project")
-	private List<ProjectInfo> projectInfo;
+	@ManyToMany(cascade=CascadeType.ALL, mappedBy="projects")
+	List<TagCloud> tagClouds;
 	
-	@OneToMany(mappedBy="project")
-	private List<TagClouds> tagClouds;
+//	@OneToMany(mappedBy="project")
+//	private List<ProjectInfo> projectInfo;
+//	
+//	@OneToMany(mappedBy="project")
+//	private List<TagClouds> tagClouds;
 	
+	public List<TagCloud> getTagClouds() {
+		return tagClouds;
+	}
+	public void setTagClouds(List<TagCloud> tagClouds) {
+		this.tagClouds = tagClouds;
+	}
 	public int getIdProject() {
 		return idProject;
 	}
@@ -43,17 +54,17 @@ public class Project {
 	public void setDurationOfProject(int durationOfProject) {
 		this.durationOfProject = durationOfProject;
 	}
-	public List<ProjectInfo> getProjectInfo() {
-		return projectInfo;
-	}
-	public void setProjectInfo(List<ProjectInfo> projectInfo) {
-		this.projectInfo = projectInfo;
-	}
-	public List<TagClouds> getTagClouds() {
-		return tagClouds;
-	}
-	public void setTagClouds(List<TagClouds> tagClouds) {
-		this.tagClouds = tagClouds;
-	}
+//	public List<ProjectInfo> getProjectInfo() {
+//		return projectInfo;
+//	}
+//	public void setProjectInfo(List<ProjectInfo> projectInfo) {
+//		this.projectInfo = projectInfo;
+//	}
+//	public List<TagClouds> getTagClouds() {
+//		return tagClouds;
+//	}
+//	public void setTagClouds(List<TagClouds> tagClouds) {
+//		this.tagClouds = tagClouds;
+//	}
 	
 }
