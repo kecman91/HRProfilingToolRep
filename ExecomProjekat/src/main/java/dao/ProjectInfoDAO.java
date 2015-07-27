@@ -2,7 +2,6 @@ package dao;
 
 import javax.persistence.Query;
 
-import model.Project;
 import model.ProjectInfo;
 
 import org.hibernate.HibernateException;
