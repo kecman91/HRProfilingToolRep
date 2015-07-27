@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import model.TagCloudEmp;
-import model.TagClouds;
 
 @Repository
 public class TagCloudEmpDAO implements ITagCloudEmpDAO {

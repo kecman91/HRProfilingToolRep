@@ -1,6 +1,5 @@
 package dao;
 
-import model.Project;
 import model.ProjectInfo;
 
 public interface IProjectInfoDAO {
