@@ -1,12 +1,13 @@
 package dao;
 
 import org.hibernate.HibernateException;
+import org.springframework.transaction.annotation.Transactional;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import model.Employee;
-import model.Project;
 
+@Transactional
 public class EmployeeDAO implements IEmployeeDAO{
 
 	@Autowired

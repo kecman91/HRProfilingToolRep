@@ -7,7 +7,9 @@ import model.ProjectInfo;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
+@Transactional
 public class ProjectInfoDAO implements IProjectInfoDAO{
 	@Autowired
 	SessionFactory sessionFactory;
