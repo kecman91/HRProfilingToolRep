@@ -23,9 +23,12 @@ public class TagCloud {
 	
 	private String tipTagCloud;
 	
-	@ManyToMany(cascade=CascadeType.ALL)  
-    @JoinTable(name="TagClouds", joinColumns=@JoinColumn(name="idTagCloud"), inverseJoinColumns=@JoinColumn(name="idProject"))  
-	private List<Project> projects;
+	@ManyToMany(cascade=CascadeType.ALL, mappedBy="tagClouds")
+	List<Project> projects;
+	
+	@ManyToMany(cascade=CascadeType.ALL, mappedBy="tagClouds")
+	List<Employee> employees;
+	
 	
 //	@OneToMany(mappedBy="tagCloud")
 //	private List<TagClouds> tagClouds;
@@ -33,6 +36,12 @@ public class TagCloud {
 //	@OneToMany(mappedBy="tagCloud")
 //	private List<TagCloudEmp> tagCloudEmps;
 	
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
+	}
 	public List<Project> getProjects() {
 		return projects;
 	}
