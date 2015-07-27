@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Data Source is defined -->
+    <bean id="ds1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:sqlserver://127.0.0.1:50175;DatabaseName=Automobil"/>
+        <property name="username" value="sa"/>
+        <property name="password" value="mali2#3@"/>
+    </bean>
+
+    <!-- Session Factory is defined -->
+    <bean id="ds1SessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="ds1"/>
+        <property name="annotatedClasses">
+            <list>
+               <value>model.Employee</value>
+                <value>model.Project</value>
+                <value>model.ProjectInfo</value>
+                <value>model.TagCloud</value>
+                <value>model.TagCloudEmp</value>
+                <value>model.TagClouds</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+          <!--  <prop key="hibernate.hbm2ddl.auto">create</prop>
+               	<prop key="hibernate.hbm2ddl.import_files">test_data.sql</prop> -->
+            </props>
+        </property>
+    </bean>
+
+    <!-- Transaction Manager is defined -->
+    <bean id="ds1TxManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="ds1SessionFactory"/>
+    </bean>
+
+</beans>
