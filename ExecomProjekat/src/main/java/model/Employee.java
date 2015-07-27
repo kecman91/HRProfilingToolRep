@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "Employee")
 public class Employee {
 	
-	public Employee(int idEmployee, String nameEmployee, String gender,
+	public Employee(String nameEmployee, String gender,
 			Date dateOfBirth, String address, String phoneNumber, String email,
 			String emergencyPhoneNumber, Date startDate, Date endDate,
 			Date startDateFromBooklet, String username, String idCardNumber,
@@ -29,7 +29,6 @@ public class Employee {
 			int influencing, int leadership, int coaching,
 			int organizationalSkills) {
 		super();
-		this.idEmployee = idEmployee;
 		this.nameEmployee = nameEmployee;
 		this.gender = gender;
 		this.dateOfBirth = dateOfBirth;
