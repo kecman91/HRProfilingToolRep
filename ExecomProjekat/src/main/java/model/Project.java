@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
@@ -21,8 +23,10 @@ public class Project {
 	
 	private int durationOfProject;
 	
-	@ManyToMany(cascade=CascadeType.ALL, mappedBy="projects")
-	List<TagCloud> tagClouds;
+	@ManyToMany(cascade=CascadeType.ALL)  
+    @JoinTable(name="TagClouds", joinColumns=@JoinColumn(name="idProject"), inverseJoinColumns=@JoinColumn(name="idTagCloud"))  
+	private List<TagCloud> tagClouds;
+
 	
 //	@OneToMany(mappedBy="project")
 //	private List<ProjectInfo> projectInfo;

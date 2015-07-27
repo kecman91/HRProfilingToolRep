@@ -3,10 +3,14 @@ package model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -68,9 +72,20 @@ public class Employee {
 	
 	private int organizationalSkills;
 	
-	@OneToMany(mappedBy="employee")
-	private List<TagCloudEmp> tagCloudEmps;
+	@ManyToMany(cascade=CascadeType.ALL)  
+    @JoinTable(name="TagCloudEmp", joinColumns=@JoinColumn(name="idEmployee"), inverseJoinColumns=@JoinColumn(name="idTagCloud"))  
+	private List<TagCloud> tagClouds;
 	
+	
+//	@OneToMany(mappedBy="employee")
+//	private List<TagCloudEmp> tagCloudEmps;
+	
+	public List<TagCloud> getTagClouds() {
+		return tagClouds;
+	}
+	public void setTagClouds(List<TagCloud> tagClouds) {
+		this.tagClouds = tagClouds;
+	}
 	@OneToMany(mappedBy="employee")
 	private List<ProjectInfo> projectInfos;	
 	
@@ -278,12 +293,12 @@ public class Employee {
 	public void setOrganizationalSkills(int organizationalSkills) {
 		this.organizationalSkills = organizationalSkills;
 	}
-	public List<TagCloudEmp> getTagCloudEmps() {
-		return tagCloudEmps;
-	}
-	public void setTagCloudEmps(List<TagCloudEmp> tagCloudEmps) {
-		this.tagCloudEmps = tagCloudEmps;
-	}
+//	public List<TagCloudEmp> getTagCloudEmps() {
+//		return tagCloudEmps;
+//	}
+//	public void setTagCloudEmps(List<TagCloudEmp> tagCloudEmps) {
+//		this.tagCloudEmps = tagCloudEmps;
+//	}
 	public List<ProjectInfo> getProjectInfos() {
 		return projectInfos;
 	}
@@ -342,8 +357,6 @@ public class Employee {
 				* result
 				+ ((startDateFromBooklet == null) ? 0 : startDateFromBooklet
 						.hashCode());
-		result = prime * result
-				+ ((tagCloudEmps == null) ? 0 : tagCloudEmps.hashCode());
 		result = prime * result + teamPlayer;
 		result = prime
 				* result
@@ -474,11 +487,6 @@ public class Employee {
 			if (other.startDateFromBooklet != null)
 				return false;
 		} else if (!startDateFromBooklet.equals(other.startDateFromBooklet))
-			return false;
-		if (tagCloudEmps == null) {
-			if (other.tagCloudEmps != null)
-				return false;
-		} else if (!tagCloudEmps.equals(other.tagCloudEmps))
 			return false;
 		if (teamPlayer != other.teamPlayer)
 			return false;
