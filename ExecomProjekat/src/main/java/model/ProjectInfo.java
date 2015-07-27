@@ -1,6 +1,5 @@
 package model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,10 +24,7 @@ public class ProjectInfo {
 	@JoinColumn(name="IDEMPLOYEE")
 	private Employee employee;
 	
-	@Column(name="JOB_RESPONSIBILITIES")
 	private String jobResponsibilities;
-	
-	@Column(name="PROJECT_EXP")
 	private String projectExp;
 	
 	public Project getProject() {
