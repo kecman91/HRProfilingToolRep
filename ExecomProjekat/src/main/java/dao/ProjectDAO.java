@@ -13,7 +13,6 @@ public class ProjectDAO implements IProjectDAO {
 	@Autowired
 	SessionFactory sessionFactory;
 
-	@Override
 	public int createProject(Project p) {
 		if (p != null) {
 			try {
@@ -29,7 +28,7 @@ public class ProjectDAO implements IProjectDAO {
 		}
 	}
 
-	@Override
+	
 	public boolean updateProject(Project p) {
 		if (p != null) {
 			try {
@@ -45,7 +44,7 @@ public class ProjectDAO implements IProjectDAO {
 		}
 	}
 
-	@Override
+	
 	public boolean deleteProject(int idProject) {
 		try {
 			Project p = getProject(idProject);
@@ -62,7 +61,7 @@ public class ProjectDAO implements IProjectDAO {
 		}
 	}
 
-	@Override
+	
 	public Project getProject(int idProject) {
 		Project p = (Project) sessionFactory.getCurrentSession().get(Project.class, idProject);
 		if (p != null) {
