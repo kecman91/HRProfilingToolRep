@@ -15,6 +15,56 @@ import javax.persistence.Table;
 @Table(name = "Employee")
 public class Employee {
 	
+	public Employee(int idEmployee, String nameEmployee, String gender,
+			Date dateOfBirth, String address, String phoneNumber, String email,
+			String emergencyPhoneNumber, Date startDate, Date endDate,
+			Date startDateFromBooklet, String username, String idCardNumber,
+			String passportNumber, int yearsOfWorkingExpInExecom,
+			int yearsOfWorking, String placeOfBirth,
+			String trainingLearningPriority, String licencesCertificates,
+			String awards, String contractType, int communication,
+			int fastLearning, int openToChange, int teamPlayer,
+			int proactiveCommunication, int interpersonalSkills,
+			int knowledgeSharing, int judgement, int decisionMaking,
+			int influencing, int leadership, int coaching,
+			int organizationalSkills) {
+		super();
+		this.idEmployee = idEmployee;
+		this.nameEmployee = nameEmployee;
+		this.gender = gender;
+		this.dateOfBirth = dateOfBirth;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+		this.emergencyPhoneNumber = emergencyPhoneNumber;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.startDateFromBooklet = startDateFromBooklet;
+		this.username = username;
+		this.idCardNumber = idCardNumber;
+		this.passportNumber = passportNumber;
+		this.yearsOfWorkingExpInExecom = yearsOfWorkingExpInExecom;
+		this.yearsOfWorking = yearsOfWorking;
+		this.placeOfBirth = placeOfBirth;
+		this.trainingLearningPriority = trainingLearningPriority;
+		this.licencesCertificates = licencesCertificates;
+		this.awards = awards;
+		this.contractType = contractType;
+		this.communication = communication;
+		this.fastLearning = fastLearning;
+		this.openToChange = openToChange;
+		this.teamPlayer = teamPlayer;
+		this.proactiveCommunication = proactiveCommunication;
+		this.interpersonalSkills = interpersonalSkills;
+		this.knowledgeSharing = knowledgeSharing;
+		this.judgement = judgement;
+		this.decisionMaking = decisionMaking;
+		this.influencing = influencing;
+		this.leadership = leadership;
+		this.coaching = coaching;
+		this.organizationalSkills = organizationalSkills;
+	}
+	
 	@Id
 	@Column(name = "IDEMPLOYEE")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
