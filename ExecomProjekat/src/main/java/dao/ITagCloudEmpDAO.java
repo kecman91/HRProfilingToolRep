@@ -6,7 +6,7 @@ public interface ITagCloudEmpDAO {
 
 	public TagCloudEmp createTagCloudEmp(TagCloudEmp tce);
 	public boolean updateTagCloudEmp(TagCloudEmp tce);
-	public boolean deleteTagCloudEmp(int idTagCloudEmp);
-	public TagCloudEmp getTagCloudEmp(int idTagCloudEmp);
+	public boolean deleteTagCloudEmp(int idTagCloud, int idEmployee);
+	public TagCloudEmp getTagCloudEmp(int idTagCloud,int idEmployee);
 	
 }

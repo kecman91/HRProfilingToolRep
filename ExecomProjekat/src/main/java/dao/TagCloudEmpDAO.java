@@ -1,6 +1,9 @@
 package dao;
 
+import java.util.List;
+
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -41,9 +44,9 @@ public class TagCloudEmpDAO implements ITagCloudEmpDAO {
 		}
 	}
 
-	public boolean deleteTagCloudEmp(int idTagCloudEmp) {
+	public boolean deleteTagCloudEmp(int idTagCloud, int idEmployee) {
 		try {
-			TagCloudEmp tce = getTagCloudEmp(idTagCloudEmp);
+			TagCloudEmp tce = getTagCloudEmp(idTagCloud,idEmployee);
 			if (tce != null) {
 				sessionFactory.getCurrentSession().delete(tce);
 				return true;
@@ -56,10 +59,12 @@ public class TagCloudEmpDAO implements ITagCloudEmpDAO {
 		}
 	}
 
-	public TagCloudEmp getTagCloudEmp(int idTagCloudEmp) {
-		TagCloudEmp tce = (TagCloudEmp) sessionFactory.getCurrentSession().get(TagCloudEmp.class, idTagCloudEmp);
-		if (tce != null) {
-			return tce;
+	public TagCloudEmp getTagCloudEmp(int idTagCloud, int idEmployee) {
+		String hql = "FROM TagCloudEmp WHERE TagCloudEmp.idTagCloud = " + idTagCloud + "AND TagCloudEmp.idEmployee = " + idEmployee;
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		List<TagCloudEmp> list = query.list();
+		if (list.size() > 0) {
+			return list.get(0);
 		}
 		return null;
 	}

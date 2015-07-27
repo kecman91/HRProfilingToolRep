@@ -6,7 +6,7 @@ public interface ITagCloudsDAO {
 
 	public TagClouds createTagClouds(TagClouds tc);
 	public boolean updateTagClouds(TagClouds tc);
-	public boolean deleteTagClouds(int idTagClouds);
-	public TagClouds getTagClouds(int idTagClouds);
+	public boolean deleteTagClouds(int idTagCloud, int idProject);
+	public TagClouds getTagClouds(int idTagCloud, int idProject);
 	
 }
