@@ -1,6 +1,21 @@
-
+buildscript {
+	repositories {
+	 	
+	 	mavenCentral()
+	}
+	    dependencies {
+        classpath("org.springframework.boot:spring-boot-starter-web:1.2.5.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
+    }
+	
+}
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+apply plugin: 'spring-boot'
+
+
 repositories {
  	mavenLocal()
  	mavenCentral()
@@ -21,15 +36,17 @@ dependencies {
 }
 
 
-
-
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 version = '1.0'
 jar {
     manifest {
         attributes 'Implementation-Title': 'Gradle Quickstart',
                    'Implementation-Version': version
     }
+    
+    baseName = 'gs-spring-boot'
+    version = '0.1.0'
 }
 
 
@@ -43,6 +60,9 @@ uploadArchives {
            dirs 'repos'
        }
     }
+}
+task wrapper(type: Wrapper){
+	gradleVersion = '2.3'
 }
 
 
